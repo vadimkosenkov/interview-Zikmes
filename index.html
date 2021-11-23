@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpack</title>
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="header">
+        <form class="header__form">
+          <div class="header__input-group">
+            <div class="header__input-wrap">
+              <input
+                type="text"
+                name="input-text"
+                autocomplete="off"
+                placeholder="Ваш номер..."
+                required
+              />
+            </div>
+            <div class="header__order-wrap header__order-wrap_disabled">
+              <button type="submit" class="fas fa-check-circle">
+                Заказать
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/4447f34fb7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./dist/bundle.js"></script>
+  </body>
+</html>

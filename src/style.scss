@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header {
+  width: 100%;
+  margin-top: 10px;
+  &__form {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  &__input-group {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+  }
+  &__input-wrap {
+    background-color: #e8e8e8dc;
+    width: 70%;
+    height: 100%;
+    transform: skew(-50deg, 0deg);
+    border: 1px solid white;
+    & input {
+      transform: skew(50deg, 0deg);
+      padding: 0 25px;
+      width: 100%;
+      border: none;
+      outline: none;
+      height: 100%;
+      background: transparent;
+      font-size: 16px;
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+  }
+  &__order-wrap {
+    background-color: #fe0000;
+    width: 30%;
+    height: 100%;
+    transform: skew(-50deg, 0deg);
+    border: 1px solid white;
+    & button {
+      cursor: pointer;
+      transform: skew(50deg, 0deg);
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      background: transparent;
+      font-size: 16px;
+    }
+    &_disabled {
+      opacity: 0.4;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    &__input-wrap,
+    &__order-wrap,
+    &__input-wrap input,
+    &__order-wrap button {
+      transform: skew(-0deg, 0deg);
+    }
+  }
+}
+@media (max-width: 414px) {
+  .header {
+    &__order-wrap button,
+    &__input-wrap input,
+    &__input-wrap input::placeholder {
+      font-size: 12px;
+    }
+  }
+}
